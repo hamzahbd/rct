@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Slabo+27px&display=swap');
+/* isi */
+
+body{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    /* display: flex; */
+    align-items: center;
+
+}
+.wrapper{
+  width: 100%;
+}
+.carousel{
+  max-width: 63%;
+  margin: auto;
+  padding: 0 30px;
+}
+.carousel .card{
+  color: black;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 250px;
+  font-size: 90px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+img{
+    width: 20%px !important;
+}
+
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 30px;
+  width: 30px;
+  margin: 0 10px;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+
+p{
+    text-align: start;
+    margin: 3% 14% 5% 18%;
+}
+
+
+/* footer */
+  .underline {
+    text-align: center;
+    }
+    
+  .line{
+      background-color: rgba(15, 28, 143, 1);
+      height: 2px;
+      margin-bottom: 30px;
+    }
+
+.copyright{
+  margin-top: 10px;
+}
+    
+  
+  
+  
+  

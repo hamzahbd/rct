@@ -1,0 +1,15 @@
+img{
+    width: 100% !important;
+    height: 100% !important;
+    text-align: center;
+    margin-left: ;
+}
+
+.desc-contain{
+    margin-top: 80px;
+    margin-left: 100px;
+    background-color: rgba(229, 243, 254, 1);
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
+}
