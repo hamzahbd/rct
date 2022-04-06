@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
-    <title>Planet Intelligence</title>
+    <title>Planet Intelligence </title>
   </head>
   <body>
       <section class="header">

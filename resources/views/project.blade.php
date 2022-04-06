@@ -5,7 +5,10 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="assets/css/Projeck.css">
 
-
+<!-- Font -->
+<link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 </head>
 <body>
     <!-- Navbar -->

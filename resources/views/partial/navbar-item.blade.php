@@ -1,13 +1,13 @@
 <div class="collapse navbar-collapse col-12 col-md-auto mb-2 justify-content-center mb-md-0" id="navbarSupportedContent">
     <ul class="navbar-nav mt-2 mt-lg-0"> 
       <li class="nav-item active">
-        <a class="nav-link current" href="/">HOME</a>
+        <a class="nav-link {{  ($title === "welcome") ? 'current' : '' }}" href="/">HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/aboutus">ABOUT US</a>
+        <a class="nav-link {{  ($title === "aboutus") ? 'current' : '' }}" href="/aboutus">ABOUT US</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           PRODUCT & DISTRIBUTOR
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -19,7 +19,7 @@
         </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/news">NEWS</a>
+        <a class="nav-link {{  ($title === "news") ? 'current' : '' }}" href="/news">NEWS</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -29,13 +29,13 @@
           <li><a class="dropdown-item" href="#">ASSESSMENT</a></li>
         </ul>
       <li class="nav-item">
-        <a class="nav-link" href="project">PROJECTS</a>
+        <a class="nav-link {{  ($title === "project") ? 'current' : '' }}" href="project">PROJECTS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/service">SERVICES</a>
+        <a class="nav-link {{  ($title === "service") ? 'current' : '' }}" href="/service">SERVICES</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">CONTACT</a>
+        <a class="nav-link {{  ($title === "contact") ? 'current' : '' }}" href="/contact">CONTACT</a>
       </li>
       <div class="searchBar col-md-3">
         <input class="form-control me-2" id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
@@ -44,6 +44,33 @@
           </svg>
         </button>
       </div>
+      
     </div>
+    </ul>
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      @auth
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          {{ auth()->user()->name  }}
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">PROFIL</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">KERANJANG</a></li>
+          <li><hr class="dropdown-divider"></li>  
+          <li><form action="/logout" method="post">
+            @csrf
+            <button class="dropdown-item" type="submit">LOGOUT</button>
+          </form></li>
+        </ul>
+      </li>
+
+      
+      
+      @else
+      <li class="nav-item {{  ($title === "login") ? 'active' : '' }}">
+        <a href="/login" class="nav-link">LOGIN</a>
+      </li>
+      @endauth
     </ul>
   </div>
