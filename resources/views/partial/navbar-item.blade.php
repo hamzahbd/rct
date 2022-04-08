@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse col-12 col-md-auto mb-2 justify-content-center mb-md-0" id="navbarSupportedContent">
     <ul class="navbar-nav mt-2 mt-lg-0"> 
       <li class="nav-item active">
-        <a class="nav-link {{  ($title === "welcome") ? 'current' : '' }}" href="/">HOME</a>
+        <a class="nav-link {{  ($title === "index") ? 'current' : '' }}" href="/">HOME</a>
       </li>
       <li class="nav-item">
         <a class="nav-link {{  ($title === "aboutus") ? 'current' : '' }}" href="/aboutus">ABOUT US</a>

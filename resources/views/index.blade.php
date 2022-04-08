@@ -14,14 +14,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Local Css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    
+    <!-- Local js -->
+    
 
     <!-- Font -->
     <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
-    <title>Planet Intelligence </title>
+    <title>Planet Intelligence</title>
   </head>
   <body>
       <section class="header">
@@ -70,8 +73,26 @@
       </section>
 
       <section>
-
-      </section>
+        <div class="countertitle container mt-5">
+          <h5>Getting the job done properly</h5>
+      </div>
+        <section class="counters">
+          <div class="container">
+              <div>
+                  <div class="counter" data-target="300000">0</div>
+                  <h3>projects from 21k customers done so far</h3>
+              </div>
+              <div>
+                  <div class="counter" data-target="250000">0</div>
+                  <h3>rate us with 5 out of 5 stars </h3>
+              </div>
+              <div>
+                  <div class="counter" data-target="180000">0</div>
+                  <h3>of our new client return with more work</h3>
+              </div>
+          </div>
+        </section>
+    </section>
       
 
 
@@ -79,7 +100,7 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <script src="./assets/js/script.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

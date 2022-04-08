@@ -10,8 +10,8 @@ class HomeController extends Controller
 
     public function home()
     {
-        return view('welcome', [
-            'title' => "welcome"
+        return view('index', [
+            'title' => "index"
         ]);
     }
 
@@ -57,28 +57,5 @@ class HomeController extends Controller
         ]);
     }
     //
-    public function authenticate(Request $request)
-    {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required'
-        ]);
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended('/');
-        }
-
-        return back()->with('LoginError', 'Login Gagal')->withInput();
-    }
-
-    public function logout(Request $request)
-    {
-        Auth::logout();
-
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        return redirect('/');
-    }
 }

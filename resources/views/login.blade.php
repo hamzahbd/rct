@@ -5,8 +5,11 @@
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
+  
     <section class="vh-100 gradient-custom">
+      
         <div class="container py-5 h-100">
+          <a href="/">Kembali</a>
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
 
@@ -48,7 +51,19 @@
                     </div>
       
                     <p><a class="text-decoration-none fs-5" href="#!">Forgot password?</a></p>
-                    <button class="btn btn-primary " type="submit">log in</button>
+                    
+                     
+                    <button class="btn btn-primary" type="submit">log in</button>
+                      
+
+                      
+                          
+                      <a class="btn btn-primary" href="{{ route('login.google') }}" role="button">Google</a>
+
+                      
+                    
+                    
+                    
                   </form>
                   </div>
     

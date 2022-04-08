@@ -1,5 +1,6 @@
   .header {
-      background-color: #7A81C1;
+      
+      background-image: url("/assets/img/Background-header.png");
       background-size: auto;
   }
 

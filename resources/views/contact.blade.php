@@ -99,12 +99,12 @@
                   <div class="mapouter ">
                     <div class="gmap_canvas">
                     
-                    <iframe width="650" height="303" id="gmap_canvas" src="https://maps.google.com/maps?q=Jl.%20Ruhui%20Rahayu%20A1%20No%2011,%20RT.01,%20Gn.%20Bahagia,%20Kec.%20Balikpapan%20Selatan,%20Kota%20Balikpapan,%20Kalimantan%20Timur%2076114&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <iframe width="640" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Jl.%20Ruhui%20Rahayu%20A1%20No%2011,%20RT.01,%20Gn.%20Bahagia,%20Kec.%20Balikpapan%20Selatan,%20Kota%20Balikpapan,%20Kalimantan%20Timur%2076114&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     
                     <a href="https://123movies-to.org"></a><br>
                     
                     
-                    <a href="https://www.embedgooglemap.net">insert google map html</a>
+                    {{-- <a href="https://www.embedgooglemap.net">insert google map html</a> --}}
                     
                 
                   
