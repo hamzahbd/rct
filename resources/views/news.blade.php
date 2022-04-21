@@ -82,13 +82,7 @@
 </section>
 
 <!-- footer -->
-<section>
-      <div class ="underline">
-        <div class="copyright pt-3 border-top border-2 border-dark  ">
-          © Copyright 2022 pt.Ruang Cipta Teknologi All rights Reserved.
-        </div>
-      </div>
-    </section>
+@include('partial.mini-footer')
 
       <script>
          $(".carousel").owlCarousel({

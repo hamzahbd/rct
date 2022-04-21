@@ -34,6 +34,25 @@
 
     <div class="container px-5 mb-xl-5">    
     
+      @foreach ($projects as $project)
+      <div class="row  d-flex mb-3 mt-3">
+        <div class="col-4 ">
+          
+          @if ($project->image)
+              <img class="img-fluid" src="{{ asset('storage/' . $project->image) }}" alt="">
+          @else
+              <img class="img-fluid" src="assets/img/image 1.png" alt="">
+          @endif
+                   
+        </div>
+        
+        <div class="desc-contain col border-start border-4 border-dark h-25 p-6">
+                <span>{{ $project->tahun }}</span><br><br>
+                <span>{{ $project->judul }}, {{ $project->mitra }} {{ $project->lokasi }}.</span>
+        </div>
+      </div>
+      @endforeach
+
         <div class="row  d-flex">
             <div class="col-4 ">
                        <img src="assets/img/image 1.png" alt="">
@@ -92,16 +111,13 @@
 </div>
 
 </section>
-    <!-- footer -->
-    <section>
-      <div class ="underline">
-        <div class="copyright pt-3 border-top border-2 border-dark  ">
-          © Copyright 2022 pt.Ruang Cipta Teknologi All rights Reserved.
-        </div>
-      </div>
-    </section>
 
+   <!-- footer -->
+   @include('partial.mini-footer')
 
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
 
 
 </body>

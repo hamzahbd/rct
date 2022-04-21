@@ -36,6 +36,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email:dns|unique:users|max:255',
+            'password' => 'required|confirmed|max:24|min:8'
+        ]);
+
+        $validated['password'] = bcrypt($validated['password']);
+
+        User::Create($validated);
+        // $request->session()->flash('success', 'Registration Successful! please login');
+
+        return redirect('/login')->with('success', 'Daftar berhasil, silahkan login');
         //
     }
 

@@ -54,6 +54,10 @@
           {{ auth()->user()->name  }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          @can('admin')
+          <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+          <li><hr class="dropdown-divider"></li>
+          @endcan
           <li><a class="dropdown-item" href="#">PROFIL</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#">KERANJANG</a></li>

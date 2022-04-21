@@ -18,7 +18,9 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-        if (Auth::attempt($credentials)) {
+        $ingat = $request->remember ? true : false;
+
+        if (Auth::attempt($credentials, $ingat)) {
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
@@ -50,10 +52,12 @@ class LoginController extends Controller
 
 
         $user = User::updateOrCreate([
-            'google_id' => $googleuser->id,
+
+            'email' => $googleuser->email,
         ], [
             'name' => $googleuser->name,
-            'email' => $googleuser->email,
+            'google_id' => $googleuser->id,
+            'is_admin' => 0,
         ]);
 
 

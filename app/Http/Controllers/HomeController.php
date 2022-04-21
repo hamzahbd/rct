@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -32,7 +33,8 @@ class HomeController extends Controller
     public function project()
     {
         return view('project', [
-            "title" => "project"
+            "title" => "project",
+            "projects" => Project::latest()->get()
         ]);
     }
 
@@ -40,6 +42,13 @@ class HomeController extends Controller
     {
         return view('login', [
             "title" => "login"
+        ]);
+    }
+
+    public function signup()
+    {
+        return view('signup', [
+            "title" => "signup"
         ]);
     }
 

@@ -64,7 +64,7 @@
                           </svg>
                         </span>
                           <div class="ps-3">
-                        <span >jln.diponegoro, gg.swadaya rt.38 kecamatan karang joang balikpapan utara balikpapan kalimantan timur </span>
+                        <span >Jl. Ruhui Rahayu A1 No. 11 RT 01,Kel. Gunung Bhagia, Kec. Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur, 76114 Indonesia.</span>
                     </div>
                     </div>
 
@@ -95,34 +95,33 @@
                     
                   </div>
 
-                  <div class="justify-content-center ms-5" >
-                  <div class="mapouter ">
-                    <div class="gmap_canvas">
+                  <div class="container justify-content-center ms-5 mb-5">
+                    <div class="mapouter ">
+                      <div class="gmap_canvas">
                     
-                    <iframe width="640" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Jl.%20Ruhui%20Rahayu%20A1%20No%2011,%20RT.01,%20Gn.%20Bahagia,%20Kec.%20Balikpapan%20Selatan,%20Kota%20Balikpapan,%20Kalimantan%20Timur%2076114&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <iframe width="100%" height="50%" id="gmap_canvas" src="https://maps.google.com/maps?q=Jl.%20Ruhui%20Rahayu%20A1%20No%2011,%20RT.01,%20Gn.%20Bahagia,%20Kec.%20Balikpapan%20Selatan,%20Kota%20Balikpapan,%20Kalimantan%20Timur%2076114&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     
-                    <a href="https://123movies-to.org"></a><br>
+                        <a href="https://123movies-to.org"></a><br>
                     
                     
-                    {{-- <a href="https://www.embedgooglemap.net">insert google map html</a> --}}
+                      {{-- <a href="https://www.embedgooglemap.net">insert google map html</a> --}}
                     
                 
                   
-                </div>
-            </div>
+                       </div>
+                    </div>
+                  </div>
 
     
         </div>
     </section>
 
-    <section>
-      <div class ="underline pt-1">
-        <div class="copyright pt-3 border-top border-2 border-dark  ">
-          © Copyright 2022 pt.Ruang Cipta Teknologi All rights Reserved.
-        </div>
-      </div>
-    </section>
+    <!-- footer -->
+    @include('partial.mini-footer')
 
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
     
 </body>
 </html>

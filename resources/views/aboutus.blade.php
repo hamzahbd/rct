@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/About_us.css">
+
+    
 
     <!-- Font -->
     <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
@@ -12,7 +14,7 @@
 </head>
 <body>
      <!-- Navbar -->
-     <section class="header">
+     <section class="header" style="background: url('assets/img/baground.png')">
         <div>
           <nav class="navbar navbar-expand-lg navbar-light container ">
             <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" alt=""></a>
@@ -74,12 +76,10 @@
     
 
     <!-- footer -->
-    <section>
-        <div class ="underline">
-          <div class="copyright pt-3 border-top border-2 border-dark  ">
-            © Copyright 2022 pt.Ruang Cipta Teknologi All rights Reserved.
-          </div>
-        </div>
-      </section>
+    @include('partial.mini-footer')
+
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

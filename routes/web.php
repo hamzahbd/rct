@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +30,27 @@ Route::get('/service', [HomeController::class, 'service']);
 
 Route::get('/project', [HomeController::class, 'project']);
 
-Route::get('/login', [HomeController::class, 'login']);
+Route::get('/login', [HomeController::class, 'login'])->middleware('guest');
+
+Route::get('/sign-up', [HomeController::class, 'signup'])->middleware('guest');
 
 Route::get('/contact', [HomeController::class, 'contact']);
 
+Route::get('/contact', [HomeController::class, 'contact']);
+
+// Login dan Register
+
 Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
+
+Route::post('/sign-up', [UserController::class, 'store'])->middleware('guest');
+
+
+// Admin Dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('is_admin');
+
+Route::resource('/dashboard/project', ProjectController::class)->middleware('is_admin');
+
 
 // Google login
 Route::get('login/google', [LoginController::class, 'redirectToGoogle'])->name('login.google');
