@@ -25,8 +25,8 @@
     <link href="{{ asset('assets/css/dashboard.css') }}" rel="stylesheet">
 
     {{-- Trix Editor --}}
-    <link rel="stylesheet" type="text/css" href="/css/trix.css">
-  <script type="text/javascript" src="/css/trix.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset("assets/css/trix.css") }}">
+  <script type="text/javascript" src="{{ asset("assets/css/trix.js") }}"></script>
 
     <style>
       trix-toolbar [data-trix-button-group="file-tools"] {

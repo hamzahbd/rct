@@ -58,7 +58,7 @@
           <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
           <li><hr class="dropdown-divider"></li>
           @endcan
-          <li><a class="dropdown-item" href="#">PROFIL</a></li>
+          <li><a class="dropdown-item" href="/profile/{{ auth()->user()->id }}">PROFIL</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#">KERANJANG</a></li>
           <li><hr class="dropdown-divider"></li>  

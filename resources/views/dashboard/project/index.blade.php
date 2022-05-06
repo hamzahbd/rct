@@ -37,9 +37,9 @@
             <td>{{ $project->tahun }}</td>
             
             <td>
-              <a href="#" class="badge bg-info"><i class="bi bi-info"></i></a>
-                <a href="#/edit" class="badge bg-warning"><i class="bi bi-pencil"></i></a>
-                <form action="/dashboard/project/ {{ $project->id }}" method="post" class="d-inline">
+              
+                <a href="/dashboard/project/{{ $project->id }}/edit" class="badge bg-warning"><i class="bi bi-pencil"></i></a>
+                <form action="/dashboard/project/{{ $project->id }}" method="post" class="d-inline">
                   @method('delete')
                   @csrf
                   <button class="badge bg-danger border-0" onclick="return confirm('Are you sure ?')"><i class="bi bi-trash"></i></button>

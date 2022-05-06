@@ -45,7 +45,7 @@ class ProjectController extends Controller
             'judul' => 'required|max:255',
             'mitra' => 'required|max:255',
             'lokasi' => 'required',
-            'tahun' => 'required',
+            'tahun' => 'required|numeric|min:1900|max:2099',
             'image' => 'image|file|max:2048',
 
         ]);
@@ -80,9 +80,12 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
         //
+        return view('dashboard.project.edit', [
+            'project' => $project
+        ]);
     }
 
     /**
@@ -92,8 +95,34 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Project $project)
     {
+
+        $validated = [
+            'judul' => 'required|max:255',
+            'mitra' => 'required|max:255',
+            'lokasi' => 'required|max:255',
+            'tahun' => 'required|numeric|min:1900|max:2099',
+            'image' => 'image|file|max:2048',
+
+        ];
+
+
+
+        $validatedData = $request->validate($validated);
+
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('img/project');
+        }
+
+
+        Project::where('id', $project->id)
+            ->update($validatedData);
+
+        return redirect('/dashboard/project')->with('success', 'Project has been edited');
         //
     }
 

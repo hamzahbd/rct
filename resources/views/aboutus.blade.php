@@ -14,7 +14,7 @@
 </head>
 <body>
      <!-- Navbar -->
-     <section class="header" style="background: url('assets/img/baground.png')">
+     <section class="header" >
         <div>
           <nav class="navbar navbar-expand-lg navbar-light container ">
             <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" alt=""></a>

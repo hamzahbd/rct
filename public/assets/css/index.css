@@ -1,5 +1,5 @@
 .header {
-  background-color: #7A81C1;
+  background-color: #3782D7;
   background-size: auto;
 }
 
@@ -151,7 +151,7 @@ margin-top: 10px;
 }
 
 .counters {
-background-color: #7A81C1;
+background-color: #3782D7;
 color: gold;
 padding: 40px 20px;
 font-family: 'Montserrat'
@@ -318,4 +318,71 @@ background-color: white;
 .hovercard:hover {
 background-color: #E5F3FE  !important;
 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.bataskonten{
+margin-top: 100px;
+}
+
+h1{
+font-family: Roboto;
+}
+h2{
+font-family: Roboto;
+}
+h3{
+font-family: Roboto;
+}
+h4{
+font-family: Roboto;
+}
+h5{
+font-family: Roboto;
+}
+h6{
+font-family: Roboto;
+}
+p{
+font-family: Roboto;
+}
+
+.animatecard {
+box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+transition: .5s;
+}
+
+.animatecard:hover {
+transform:scale(1.1);
+}
+
+.animatecard:before {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 40%;
+/* background: rgba(255, 255, 255, .1); */
+z-index: 1;
+transform: skewY(-5deg) scale(1.5);
+}
+
+.footerlink {
+font-family: Roboto;
+color: #646464;
+text-decoration: none;
+}
+
+.pill-button-footer {
+background-color: #2370C8;
+border: none;
+color: white;
+padding: 10px 50px 10px 50px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin: 4px;
+cursor: pointer;
+border-radius: 30px;
+font-size: 20px;
 }

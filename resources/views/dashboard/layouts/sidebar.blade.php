@@ -9,12 +9,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/order*') ? 'active' : '' }}" aria-current="page" href="#">
-            <span data-feather="grid"></span>
+            <span data-feather="bi bi-mailbox"></span>
             Order
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/produk*') ? 'active' : '' }}" aria-current="page" href="#">
+          <a class="nav-link {{ Request::is('dashboard/product*') ? 'active' : '' }}" aria-current="page" href="/dashboard/product">
             <span data-feather="grid"></span>
             Produk
           </a>
