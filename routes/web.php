@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\DashboardController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::get('/news', [HomeController::class, 'news']);
 
 Route::get('/', [HomeController::class, 'home']);
 
+Route::get('/home', [HomeController::class, 'home']);
+
 Route::get('/aboutus', [HomeController::class, 'aboutus']);
 
 Route::get('/service', [HomeController::class, 'service']);
@@ -37,11 +40,20 @@ Route::get('/sign-up', [HomeController::class, 'signup'])->middleware('guest');
 
 Route::get('/contact', [HomeController::class, 'contact']);
 
-Route::get('/contact', [HomeController::class, 'contact']);
+Route::get('/products', [HomeController::class, 'products']);
+
+
+
+Route::get('/product-details/{product:slug}', [HomeController::class, 'product_detail']);
+
+Route::get('/cart', [HomeController::class, 'cart'])->middleware('auth');
+
+Route::post('/product-details/{product:slug}/addToCart', [ProductController::class, 'addToCart'])->middleware('auth');
+Route::delete('/cart/{product:slug}/removeFromCart', [ProductController::class, 'removeFromCart'])->middleware('auth');
 
 // Login dan Register
 
-Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
 Route::post('/sign-up', [UserController::class, 'store'])->middleware('guest');

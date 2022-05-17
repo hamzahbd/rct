@@ -9,6 +9,12 @@ class Cart extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+    protected $fillable = [
+        'user_id',
+        'total',
+    ];
+
     /**
      * Get the user that owns the Cart
      *
@@ -21,6 +27,6 @@ class Cart extends Model
 
     public function product()
     {
-        return $this->belongsToMany(Product::class, 'cart_details');
+        return $this->belongsToMany(Product::class, 'cart_details')->withPivot('jumlah', 'updated_at');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\User;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
@@ -48,7 +49,10 @@ class UserController extends Controller
 
         $validated['password'] = bcrypt($validated['password']);
 
-        User::Create($validated);
+        $user = User::Create($validated);
+        Cart::Create([
+            'user_id' => $user->id,
+        ]);
         // $request->session()->flash('success', 'Registration Successful! please login');
 
         return redirect('/login')->with('success', 'Daftar berhasil, silahkan login');
@@ -132,18 +136,31 @@ class UserController extends Controller
 
     public function alamat(User $user)
     {
+        if ($user->alamat != NULL) {
+            $alamat = $user->alamat;
+            $Arrayalamat = explode('+', $alamat);
+            return view('profile.alamat', [
+                'title' => "alamat",
+                'user' => $user,
+                'provinsi' => $Arrayalamat[0],
+                'kota' => $Arrayalamat[1],
+                'kecamatan' => $Arrayalamat[2],
+                'kode_pos' => $Arrayalamat[3],
+                'jalan' => $Arrayalamat[4],
+            ]);
+        } else {
+            return view('profile.alamat', [
+                'title' => "alamat",
+                'user' => $user,
+                'provinsi' => '',
+                'kota' => '',
+                'kecamatan' => '',
+                'kode_pos' => '',
+                'jalan' => '',
+            ]);
+        }
         //
-        $alamat = $user->alamat;
-        $Arrayalamat = explode('+', $alamat);
-        return view('profile.alamat', [
-            'title' => "alamat",
-            'user' => $user,
-            'provinsi' => $Arrayalamat[0],
-            'kota' => $Arrayalamat[1],
-            'kecamatan' => $Arrayalamat[2],
-            'kode_pos' => $Arrayalamat[3],
-            'jalan' => $Arrayalamat[4],
-        ]);
+
     }
 
     public function alamat_edit(Request $request, User $user)

@@ -17,8 +17,7 @@ class CartSeeder extends Seeder
     {
         //
         Cart::create([
-            'tanggal' => date('Y-m-d H:i:s'),
-            'user_id' => 1,
+            'user_id' => 6,
         ]);
     }
 }

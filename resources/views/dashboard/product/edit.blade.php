@@ -7,13 +7,14 @@
 </div>
 
 <div class="col-lg-8">
-    <form method="POST" action="/dashboard/product/{{ $product->id }}" enctype="multipart/form-data">
+    <form method="POST" action="/dashboard/product/{{ $product->slug }}" enctype="multipart/form-data">
         @method('put')
         @csrf
         <div class="mb-3">
           <label for="nama" class="form-label">Nama</label>
           <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" required autofocus value="
           {{ $product->nama }}">
+          <input type="hidden" name="slug" id="slug">
           
           @error('nama')
             <div class="invalid-feedback">
@@ -114,6 +115,14 @@
         e.preventDefault();
     })
 
+    const title = document.querySelector('#nama');
+    const slug = document.querySelector('#slug');
+
+    title.addEventListener('change',function(){
+        fetch('/dashboard/product/checkSlug?nama=' + title.value)
+        .then(response => response.json())
+        .then(data => slug.value = data.slug)
+    });
 
     function previewImage()
     {

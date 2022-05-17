@@ -4,31 +4,35 @@
 body{
   font-family: 'Roboto', sans-serif !important;
 }
-body {
-  background-image: url("../img/baground.png");
+body{
+    background-image: url("../img/baground.png");
 
   }
 
 button{
-    margin-left: 52%;
-    width: 200px;
+    margin-left: 60%;
+    width: 40%;
     background-color: rgb(15, 28, 143, 0.9) !important;
     padding-top: 12px !important;
     padding-bottom: 12px !important;
     border-radius: 10px !important;
-
-
 }
 
-.input>.email,.password,p{
+.input>.email,.password,p,.First-Name,.Last-Name,.Email,.Confirm-Password{
   color: rgba(128, 128, 128, 1);
   font-style: italic;
+
 }
 
-.input>p{
-  margin-top: 0%;
+label{
+    padding-top: 5%  !important;
 }
+
 .border{
   border-color: rgba(128, 128, 128, 1) !important;
+  border-radius: 10px;
 }
 
+.underline{
+    margin-top: 16% !important;
+}

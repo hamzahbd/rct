@@ -82,5 +82,6 @@ class CartDetailController extends Controller
     public function destroy(CartDetail $cartDetail)
     {
         //
+
     }
 }

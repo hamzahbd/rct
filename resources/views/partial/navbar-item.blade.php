@@ -7,11 +7,11 @@
         <a class="nav-link {{  ($title === "aboutus") ? 'current' : '' }}" href="/aboutus">ABOUT US</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle {{  ($title === "products" || $title === "distributor") ? 'current' : '' }}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           PRODUCT & DISTRIBUTOR
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="#">PRODUCT</a></li>
+          <li><a class="dropdown-item" href="/products">PRODUCT</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#">DISTRIBUTOR</a></li>
           <li><hr class="dropdown-divider"></li>  
@@ -60,7 +60,7 @@
           @endcan
           <li><a class="dropdown-item" href="/profile/{{ auth()->user()->id }}">PROFIL</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">KERANJANG</a></li>
+          <li><a class="dropdown-item" href="/cart">KERANJANG</a></li>
           <li><hr class="dropdown-divider"></li>  
           <li><form action="/logout" method="post">
             @csrf

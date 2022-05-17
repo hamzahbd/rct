@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Slabo+27px&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.styleButton{
+    margin-top: 200%;
+    background-color: rgba(35, 112, 200, 1);
+    border-radius: 20px;
+    color: white;
+    width: 25px;
+    height: 25px;
+    
+}
+
+.buttonimg{
+    background-color: rgba(196, 196, 196, 1);
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    
+}
+
+.buttonimg:hover{
+    background-color: rgba(35, 112, 200, 1);
+
+}
+
+.w3-red{
+    background-color: rgba(35, 112, 200, 1);
+}
+
+.text{
+    text-align: justify;
+}
+
+
+.btnn,.nominal{
+    height: 30px;
+    border: 0px;
+    background-color: rgba(229, 243, 254, 1);
+    width: 100px;
+    border-radius: 5px;
+    
+}
+
+.Addtocard{
+    background-color: rgba(35, 112, 200, 1);
+    border-radius: 5px;
+}
+/* slide bagian bawahnya  */
+
+.wrapper{
+    width: 100%;
+  }
+  .carousel{
+    max-width: 100%;
+  }
+  .carousel .card{
+    background-color: rgba(229, 243, 254, 1);
+    text-align: center;
+    padding: 6%;
+    /* background-color: white; */
+  }
+  
+  .img-card{
+      width: 90% !important;
+  }
+  

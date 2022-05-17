@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
+use App\Models\Product;
 use App\Models\Project;
+use App\Models\CartDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -63,6 +66,39 @@ class HomeController extends Controller
     {
         return view('contact', [
             "title" => "contact"
+        ]);
+    }
+
+    public function products()
+    {
+        return view('products', [
+            "title" => "products",
+            "products" => Product::latest()->paginate(6),
+        ]);
+    }
+
+    public function cart()
+    {
+        // CartDetail::where('cart_id', $cart->id)->get()
+        $cart = Cart::where('user_id', Auth::id())->first();
+
+        if ($cart == NULL) {
+            $cart = Cart::Create([
+                'user_id' => Auth::id(),
+            ]);
+        }
+
+        return view('cart', [
+            "title" => "cart",
+            "cart" => $cart,
+        ]);
+    }
+
+    public function product_detail(Product $product)
+    {
+        return view('product_detail', [
+            "title" => "products",
+            "product" => $product,
         ]);
     }
     //

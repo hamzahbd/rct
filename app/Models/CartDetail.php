@@ -2,12 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class CartDetail extends Model
+class CartDetail extends Pivot
 {
     use HasFactory;
+    protected $fillable = [
+        'cart_id',
+        'product_id',
+        'jumlah',
+
+    ];
 
     public function product()
     {
