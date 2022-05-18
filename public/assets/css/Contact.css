@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Slabo+27px&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.form{
+    border: 0;
+    border-color: rgba(137, 137, 137, 1) !important;
+    border: none;
+    outline: none;
+}
+
+.message{
+    padding-bottom: 20% ;
+}
+
+.mapouter{
+    padding-top: 10%;
+    margin: auto;
+    text-align: center;
+    border-radius: 100px;
+    
+}
+
+
